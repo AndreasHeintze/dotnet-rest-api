@@ -1,0 +1,21 @@
+@RestApi_HostAddress = http://localhost:5084
+
+### Hämta nytt Chuck-skämt
+GET {{RestApi_HostAddress}}/chuck
+Accept: application/json
+
+### Spara ett skämt
+POST {{RestApi_HostAddress}}/chuck
+Content-Type: application/json
+
+{
+  "value": "Chuck Norris kan dela med noll."
+}
+
+### Visa alla sparade
+GET {{RestApi_HostAddress}}/saved
+Accept: application/json
+
+### Hämta ett specifikt skämt
+GET {{RestApi_HostAddress}}/saved/1
+Accept: application/json
